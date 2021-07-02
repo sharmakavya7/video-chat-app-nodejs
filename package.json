@@ -12,8 +12,8 @@
     "nodemon": "^2.0.6"
   },
   "scripts": {
-    "watch": "nodemon --watch \"src/\" --exec \"node src/app.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "nodemon --watch \"src/\" --exec \"node src/app.",
+    "start" : "node app.js"
   },
   "repository": {
     "type": "git",
