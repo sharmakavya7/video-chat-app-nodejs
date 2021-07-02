@@ -1,10 +1,10 @@
-/* body { 
-    background: url(src/img/v481-bb-ning-11_1.JPEG) no-repeat center center fixed; 
+body { 
+    background-image: url("../img/v481-bb-ning-11_1.JPEG") ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  } */
+  }
 
 #room-created {
     color: azure;

@@ -8,11 +8,15 @@ let favicon = require( 'serve-favicon' );
 
 app.use( favicon( path.join( __dirname, 'favicon.ico' ) ) );
 app.use( '/assets', express.static( path.join( __dirname, 'assets' ) ) );
+app.use( '/img', express.static( path.join( __dirname, 'img' ) ) );
 
 app.get( '/', ( req, res ) => {
-    res.sendFile( __dirname + '/index.html' );
+    res.sendFile( __dirname + '/form.html' );
 } );
 
+app.get( '/teams', ( req, res ) => {
+    res.sendFile( __dirname + '/index.html' );
+} );
 
 io.of( '/stream' ).on( 'connection', stream );
 

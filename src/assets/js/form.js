@@ -29,6 +29,10 @@ var firebaseConfig = {
     var email = document.getElementById("email");
     var password  = document.getElementById("password");
     const promise = auth.signInWithEmailAndPassword(email.value,password.value);
+    promise.then(() => {
+      console.log("Sign in successful");
+      location.href="/teams";
+    })
     promise.catch(e=>alert(e.message));
     
   }
