@@ -16,31 +16,34 @@
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
         <script src="assets/js/form.js"></script>
-            <title>Sign up</title>
+            <title>Video chat app</title>
+            <link rel="shortcut icon" type="image/png" href="src/favicon.png"/>
 </head>
-<body> 
+<body class="bg-image"> 
+<!-- <body style = "background: url(src/img/v481-bb-ning-11_1.JPEG) no-repeat center center fixed"></body> -->
     <!-- <h1 class="title" id = "welcome"><b>welcome</b></h1> -->
+    
     <div id="login-box">
         <div class="left">
             <!-- <h1>Sign up</h1> -->
             <div class="formContainer">
-            <h1>Sign up</h1>
+            <h1><b>Sign up</b></h1>
                 
                 <input type="text"  name="username" placeholder="Username" required> <br>
                 <input type="text"  placeholder="Enter e-mail here" id="email" required><br>
                 <input type="password"  placeholder="Enter password here" id="password" required><br>
-                <input onclick="signUp()" type="submit" name="signup_submit" value="Sign me up" id="signUp"/>
+                <input onclick="signUp()" type="submit" name="signup_submit" value="Sign up" id="signUp"/>
                 <!-- <button onclick="signUp();" id="signUp" type="submit" name="signup_submit">SignUp</button> -->
                 <!-- <a onclick="signOut()" class="waves-effect waves-light btn-small text-white" id="signOut"> <i class="material-icons left"></i>SignOut</a>
                 <button onclick="signIn()" type="submit" id="signIn">SignIn</button> -->
-
+            
             </div>
         </div>
-
-    <div class="right">
-    <span class="loginwith">or sign in with social platforms</span>
     
-    <button onclick = "signInWithGoogle()" class="social-signin btn" >Log in with Google</button>
+    <div class="right">
+    <span class="loginwith">Sign in with </span>
+    
+    <button onclick = "signInWithGoogle()" class="social-signin btn" > Google</button>
     <!-- <button class="social-signin microsoft">Log in with Microsoft</button>
     <button onclick = "twitterSignInPopup()" class="social-signin twitter">Log in with Twitter</button>  
      -->
@@ -49,24 +52,3 @@
 </div>
 </body>
 </html>
-
-<!-- <div class="container">
-    <div class = "form-container">
-        <div class="signin-signup">
-            <h2 class="title">Sign in</h2>
-            <div class= "input-field">
-                <i class= "fas fa-user"></i>
-                <input type="text"  name="username" placeholder="Username" required> <br>
-            </div>
-            <div class = "input-field">
-                <i class = "fas fa-lock"></i>
-                <input type="text"  placeholder="Enter e-mail here" id="email" required><br>
-            </div>
-            <input onclick="signUp()" type="submit" name="signup_submit" value="Login" class = "btn solid" id="signUp"/>
-            <p class = "social-text">or sign in with social platforms</p>
-            
-        </div>
-
-    </div>
-
-</div> -->

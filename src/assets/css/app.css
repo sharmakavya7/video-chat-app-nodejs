@@ -1,6 +1,6 @@
 body { 
-    /* background-image: url("../img/new.jpg") ;  */
-
+    background-image: url('../img/new.jpg'); 
+    height: 100vh;
     background-color: #282828;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -268,6 +268,21 @@ body {
   outline: none;
 }
 
+h1{
+    font-family: ' Greycliff CF';
+    font-weight:bolder;
+}
+
+.bg-image{
+    background-image: url('../img/VIVA-background-Abstract-05.jpg'); 
+    height: 100vh;
+    background-color: #282828;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 #signUp{
     text-align: center;
 }
@@ -292,6 +307,7 @@ body {
 #login-box {
   position: relative;
   margin: 5% auto;
+  top:100px;
   width: 600px;
   height: 400px;
   background: #FFF;
@@ -382,7 +398,7 @@ input[type="submit"]:active {
 
 .right {
   position: absolute;
-  top: 0;
+  top: 110px;
   right: 0;
   box-sizing: border-box;
   padding: 40px;
@@ -395,10 +411,11 @@ input[type="submit"]:active {
 }
 
 .right .loginwith {
+    font-family: 'Greycliff CF' ;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 28px;
-  color: #FFF;
+  color:black;
   text-align: center;
 }
 
@@ -426,15 +443,7 @@ button.social-signin:active {
   transition: 0.2s ease;
 }
 
-button.social-signin.microsoft {
-  background: #0067b8;
-}
-
-button.social-signin.twitter {
-  background: #55ACEE;
-}
-
-button.social-signin.google {
+button.social-signin     {
   background: #DD4B39;
 }
 
