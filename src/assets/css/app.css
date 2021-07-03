@@ -1,5 +1,6 @@
 body { 
     /* background-image: url("../img/new.jpg") ;  */
+
     background-color: #282828;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,6 +10,14 @@ body {
 
 #create-room-heading{
     top:60px;
+}
+
+#create-room{
+    display: block;
+   width: 100%;
+   box-sizing: border-box;
+   text-align: center;
+   margin: 12px 0;
 }
 
 #row-mt2{
@@ -21,6 +30,8 @@ body {
 
 #room-created {
     color: azure;
+    top: 100px;
+    text-align: center;
 }
 
 #chat-heading{
@@ -257,6 +268,9 @@ body {
   outline: none;
 }
 
+#signUp{
+    text-align: center;
+}
 
 .title {
     font-size: 48px;

@@ -49,6 +49,10 @@
         
         <nav class="navbar fixed-top #212121 grey darken-4 rounded-0 d-print-none">
             <div class="text-white"><b>Video Chat</b></div>
+            <a href="/" > 
+            <button class ="btn btn-circle rounded-25 btn-primary float-right fas fa-sign-in-alt red btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title = "Sign out"> 
+                <i class="large material-icons text-light"></i> 
+            </button> </a>
         </nav>
 
         
@@ -62,7 +66,7 @@
                 <i class="fa fa-microphone text-light"></i>
             </button>
 
-            <a href="/" class="text-white text-decoration-none">
+            <a href="/" class="text-white text-decoration-none"></a>
             <button class="btn btn-md waves-effect waves-light red btn-circle text-white">
                 <i class="large material-icons text-light" title="Leave call"> call_end </i>
             </button></a>
@@ -104,10 +108,13 @@
                 </div>
 
                 <div class="col-12 col-md-4 offset-md-4 mb-3" id = "row-mt2">
-                    <button id='create-room' class="btn btn-block rounded-0 btn-primary fa fa-video">&nbsp Start call</button>
+                    <button id='create-room'  class="btn btn-circle rounded-50 btn-primary blue fa fa-video"> 
+                        <i class="large material-icons text-light"></i> Start call</button>
                 </div>
 
                 <div class="col-12 col-md-4 offset-md-4 mb-3" id='room-created'></div>
+                <!-- <input type="text" value="roomLink" id="myInput" hidden>
+                    <button onclick="copy()" hidden>Copy text</button> -->
             </div>
         </div>
 
@@ -129,7 +136,8 @@
                 </div>
 
                 <div class="col-12 col-md-4 offset-md-4 mb-3" id = "join-room">
-                    <button id='enter-room' class="btn btn-block rounded-0 btn-primary">Join</button>
+                    <button id='enter-room' class="btn btn-block rounded-25 btn-primary blue">
+                        <i class="large material-icons text-light"></i>Join</button>
                 </div>
             </div>
         </div>
@@ -163,5 +171,6 @@
         <script>
             CKEDITOR.replace('content');
         </script>  -->
+        
     </body>
 </html>

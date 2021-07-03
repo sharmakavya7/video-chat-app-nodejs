@@ -19,7 +19,7 @@
             <title>Sign up</title>
 </head>
 <body> 
-    <h1 class="title" id = "welcome"><b>WELCOME</b></h1>
+    <!-- <h1 class="title" id = "welcome"><b>welcome</b></h1> -->
     <div id="login-box">
         <div class="left">
             <!-- <h1>Sign up</h1> -->
@@ -31,21 +31,42 @@
                 <input type="password"  placeholder="Enter password here" id="password" required><br>
                 <input onclick="signUp()" type="submit" name="signup_submit" value="Sign me up" id="signUp"/>
                 <!-- <button onclick="signUp();" id="signUp" type="submit" name="signup_submit">SignUp</button> -->
-                <button onclick="signIn()" type="submit" id="signIn">SignIn</button>
-                <button onclick="signOut()" id="signOut">SignOut</button>
+                <!-- <a onclick="signOut()" class="waves-effect waves-light btn-small text-white" id="signOut"> <i class="material-icons left"></i>SignOut</a>
+                <button onclick="signIn()" type="submit" id="signIn">SignIn</button> -->
 
             </div>
         </div>
 
     <div class="right">
-    <span class="loginwith">Sign in with<br />social network</span>
+    <span class="loginwith">or sign in with social platforms</span>
     
-    <button class="social-signin microsoft">Log in with Microsoft</button>
-    <button class="social-signin twitter">Log in with Twitter</button>
-    <button class="social-signin google">Log in with Google</button>
+    <button onclick = "signInWithGoogle()" class="social-signin btn" >Log in with Google</button>
+    <!-- <button class="social-signin microsoft">Log in with Microsoft</button>
+    <button onclick = "twitterSignInPopup()" class="social-signin twitter">Log in with Twitter</button>  
+     -->
   </div>
   <div class="or">OR</div>
 </div>
-
 </body>
 </html>
+
+<!-- <div class="container">
+    <div class = "form-container">
+        <div class="signin-signup">
+            <h2 class="title">Sign in</h2>
+            <div class= "input-field">
+                <i class= "fas fa-user"></i>
+                <input type="text"  name="username" placeholder="Username" required> <br>
+            </div>
+            <div class = "input-field">
+                <i class = "fas fa-lock"></i>
+                <input type="text"  placeholder="Enter e-mail here" id="email" required><br>
+            </div>
+            <input onclick="signUp()" type="submit" name="signup_submit" value="Login" class = "btn solid" id="signUp"/>
+            <p class = "social-text">or sign in with social platforms</p>
+            
+        </div>
+
+    </div>
+
+</div> -->
