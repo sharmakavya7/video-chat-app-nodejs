@@ -10,6 +10,7 @@
         
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel='stylesheet' href='assets/css/app.css' type="text/css">
 
         <script src='/socket.io/socket.io.js'></script>
@@ -23,7 +24,7 @@
         <script src='assets/js/autolink.js'></script>
     </head>
 
-    <body > 
+    <body style="background-color:#303030;"> 
         <!-- <body style = "background: url(src\img\v481-bb-ning-11_1.JPEG) no-repeat center center fixed"> -->
         
         <div class="custom-modal" id='recording-options-modal'>
@@ -46,74 +47,63 @@
         </div>
         
         
-        <nav class="navbar fixed-top bg-dark rounded-0 d-print-none">
+        <nav class="navbar fixed-top #212121 grey darken-4 rounded-0 d-print-none">
             <div class="text-white"><b>Video Chat</b></div>
         </nav>
 
         
-        <div class="pull-right room-comm" id = "footer" hidden> 
-            <button class="btn btn-md btn-light btn-circle " id='toggle-video' title="Hide Video">
-                <i class="fa fa-video text-dark"></i>
+        <div class="pull-right #212121 grey darken-4 room-comm" id = "footer" hidden> 
+            <button class="waves-effect waves-light btn btn-md #424242 grey darken-3 btn-circle " id='toggle-video' title="Hide Video">
+                <i class="fa fa-video text-light"></i>
             </button>
 
-            <button class="btn btn-md btn-light btn-circle" id='toggle-mute' title="Mute">
+            <button class="btn btn-md #424242 grey darken-3 btn-circle" id='toggle-mute' title="Mute">
                 <!-- <span class="material-icons-outlined"></span>  -->
-                <i class="fa fa-microphone text-dark"></i>
+                <i class="fa fa-microphone text-light"></i>
             </button>
 
             <a href="/" class="text-white text-decoration-none">
-            <button class="btn btn-md btn-danger btn-circle text-white">
-                <i class="fa fa-phone-slash text-light" title="Leave call"></i>
+            <button class="btn btn-md waves-effect waves-light red btn-circle text-white">
+                <i class="large material-icons text-light" title="Leave call"> call_end </i>
             </button></a>
 
-            <button class="btn btn-md btn-light btn-circle text-white pull-right" id='toggle-chat-pane'>
-                <i class="fa fa-comment text-dark"></i> <span class="badge badge-danger very-small font-weight-lighter" id='new-chat-notification' hidden>New</span>
+            <button class="btn btn-md #424242 grey darken-3 btn-circle text-white pull-right" id='toggle-chat-pane'>
+                <i class="large material-icons text-light">chat</i> <span class="collection-item"><span class="badge white-text red" id='new-chat-notification' hidden>new</span>
             </button>
 
-            <button class="btn btn-md btn-light btn-circle" id='share-screen' title="Present now">
-                <i class="fa fa-desktop text-dark"></i>
+            <button class="btn btn-md #424242 grey darken-3 btn-circle" id='share-screen' title="Present now">
+                <i class="fa fa-desktop text-light"></i>
             </button>
 
-            <button class="btn btn-md btn-light btn-circle" id='record' title="Record">
-                <i class="fa fa-dot-circle text-dark"></i>
+            <button class="btn btn-md #424242 grey darken-3 btn-circle" id='record' title="Record">
+                <i class="fa fa-dot-circle text-light"></i>
             </button>
 
-            <!-- <div class="btn-group dropup">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    more<i class="fa fa-dots text-dark"></i>
-                </button>
-                <div class="dropdown-menu" id = "dropup">
-                    <a href="#"> option1</a>
-                    <a href="#"> option2</a>
-                    <a href="#"> option3</a>
-                </div>
-            </div> -->
-          
 
             
         </div>
 
         <div class="container-fluid" id='room-create' hidden>
             <div class="row">
-                <div class="col-12 h2 mt-5 text-center text-white">Create Room</div>
+                <div class="col-12 h1 mt-5 text-center text-white" id = "create-room-heading">Create Room</div>
             </div>
             
-            <div class="row mt-2">
+            <div class="row mt-2" >
                 <div class="col-12 text-center">
                     <span class="form-text small text-danger" id='err-msg'></span>
                 </div>
 
-                <div class="col-12 col-md-4 offset-md-4 mb-3 text-white">
-                    <label for="room-name">Room Name</label>
-                    <input type="text" id='room-name' class="form-control rounded-0" placeholder="Room Name">
+                <div class="col-12 col-md-4 offset-md-4 mb-3 text-white" id = "row-mt2">
+                    <label for="room-name"><h6>Room Name</h6></label>
+                    <input type="text" id='room-name' class="form-control rounded-0" placeholder="Enter room name">
                 </div>
 
-                <div class="col-12 col-md-4 offset-md-4 mb-3 text-white">
-                    <label for="your-name">Your Name</label>
-                    <input type="text" id='your-name' class="form-control rounded-0" placeholder="Your Name">
+                <div class="col-12 col-md-4 offset-md-4 mb-3 text-white" id = "row-mt2">
+                    <label for="your-name"><h6>Your Name</h6></label>
+                    <input type="text" id='your-name' class="form-control rounded-0" placeholder="Enter your name">
                 </div>
 
-                <div class="col-12 col-md-4 offset-md-4 mb-3">
+                <div class="col-12 col-md-4 offset-md-4 mb-3" id = "row-mt2">
                     <button id='create-room' class="btn btn-block rounded-0 btn-primary fa fa-video">&nbsp Start call</button>
                 </div>
 
@@ -124,8 +114,8 @@
 
 
         <div class="container-fluid" id='username-set' hidden>
-            <div class="row">
-                <div class="col-12 h4 mt-5 text-center text-white">Your Name</div>
+            <div class="row" >
+                <div class="col-12 h4 mt-5 text-center text-white" id = "join-room"><h1><b>Enter room</b></h1></div>
             </div>
             
             <div class="row mt-2">
@@ -133,13 +123,13 @@
                     <span class="form-text small text-danger" id='err-msg-username'></span>
                 </div>
 
-                <div class="col-12 col-md-4 offset-md-4 mb-3 text-white">
-                    <label for="username">Your Name</label>
-                    <input type="text" id='username' class="form-control rounded-0" placeholder="Your Name">
+                <div class="col-12 col-md-4 offset-md-4 mb-3 text-white" id = "join-room">
+                    <label for="username"><h6>Your Name</h6></label>
+                    <input type="text" id='username' class="form-control rounded-0" placeholder="Enter your name">
                 </div>
 
-                <div class="col-12 col-md-4 offset-md-4 mb-3">
-                    <button id='enter-room' class="btn btn-block rounded-0 btn-primary">Enter Room</button>
+                <div class="col-12 col-md-4 offset-md-4 mb-3" id = "join-room">
+                    <button id='enter-room' class="btn btn-block rounded-0 btn-primary">Join</button>
                 </div>
             </div>
         </div>
@@ -157,7 +147,7 @@
 
                 <div class="col-md-3 chat-col d-print-none mb-2 bg-light" id='chat-pane' hidden>
                     <div class="row">
-                        <div class="col-12 text-center h2 mb-3 text-dark" >Chat</div>
+                        <div class="col-12 text-center h2 mb-3 text-dark" id="chat-heading"><b>Chat</b></div>
                     </div>
 
                     <div id='chat-messages'></div>

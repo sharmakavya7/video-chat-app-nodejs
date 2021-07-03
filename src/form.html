@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel='stylesheet' href='src/assets/css/form.css' type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel='stylesheet' href='assets/css/app.css' type="text/css">
 
         <script src='/socket.io/socket.io.js'></script>
         <script type="module" src='assets/js/rtc.js'></script>
@@ -15,9 +16,10 @@
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
         <script src="assets/js/form.js"></script>
-            <title>Login </title>
+            <title>Sign up</title>
 </head>
-<body>
+<body> 
+    <h1 class="title" id = "welcome"><b>WELCOME</b></h1>
     <div id="login-box">
         <div class="left">
             <!-- <h1>Sign up</h1> -->
@@ -29,7 +31,7 @@
                 <input type="password"  placeholder="Enter password here" id="password" required><br>
                 <input onclick="signUp()" type="submit" name="signup_submit" value="Sign me up" id="signUp"/>
                 <!-- <button onclick="signUp();" id="signUp" type="submit" name="signup_submit">SignUp</button> -->
-                <button onclick="signIn()" type="submit" id="signIp">SignIn</button>
+                <button onclick="signIn()" type="submit" id="signIn">SignIn</button>
                 <button onclick="signOut()" id="signOut">SignOut</button>
 
             </div>

@@ -10,6 +10,7 @@ app.use( favicon( path.join( __dirname, 'favicon.ico' ) ) );
 app.use( '/assets', express.static( path.join( __dirname, 'assets' ) ) );
 app.use( '/img', express.static( path.join( __dirname, 'img' ) ) );
 
+
 app.get( '/', ( req, res ) => {
     res.sendFile( __dirname + '/form.html' );
 } );
