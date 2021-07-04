@@ -13,10 +13,11 @@
         <script src='/socket.io/socket.io.js'></script>
         <script type="module" src='assets/js/rtc.js'></script>
         <script type="module" src='assets/js/events.js'></script>
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
         <script src="assets/js/form.js"></script>
-            <title>Video chat app</title>
+            <title>Konnect</title>
             <link rel="shortcut icon" type="image/png" href="src/favicon.png"/>
 </head>
 <body class="bg-image"> 
@@ -25,7 +26,7 @@
     
     <div id="login-box">
         <div class="left">
-            <!-- <h1>Sign up</h1> -->
+            <!-- <h1>Sign up</h1> --> 
             <div class="formContainer">
             <h1><b>Sign up</b></h1>
                 
@@ -42,7 +43,7 @@
     
     <div class="right">
     <span class="loginwith">Sign in with </span>
-    
+    <!-- <button onload = "renderButton()" onclick="signInWithGoogle()" ></button> -->
     <button onclick = "signInWithGoogle()" class="social-signin btn" > Google</button>
     <!-- <button class="social-signin microsoft">Log in with Microsoft</button>
     <button onclick = "twitterSignInPopup()" class="social-signin twitter">Log in with Twitter</button>  

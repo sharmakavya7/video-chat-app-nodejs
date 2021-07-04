@@ -274,8 +274,9 @@ h1{
 }
 
 .bg-image{
-    background-image: url('../img/VIVA-background-Abstract-05.jpg'); 
-    height: 100vh;
+    background-image: url('../img/UCaaSseries4-1200x480@2x-1.png'); 
+    /* width: 100vw; */
+    height: 90vh;
     background-color: #282828;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -310,6 +311,7 @@ body {
   top:100px;
   width: 600px;
   height: 400px;
+  right:350px;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -444,7 +446,8 @@ button.social-signin:active {
 }
 
 button.social-signin     {
-  background: #DD4B39;
+  background: #4285F4;
+  font-family: "Roboto-Medium.ttf";
 }
 
 
