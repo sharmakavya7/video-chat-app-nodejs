@@ -12,6 +12,7 @@ body {
     top:60px;
 }
 
+
 #create-room{
     display: block;
    width: 100%;
@@ -29,6 +30,12 @@ body {
 }
 
 #room-created {
+    text-decoration:underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: larger;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 5px black;
     color: azure;
     top: 100px;
     text-align: center;
@@ -274,7 +281,7 @@ h1{
 }
 
 .bg-image{
-    background-image: url('../img/UCaaSseries2-1200x480@2x.png'); 
+    background-image: url('../img/VoIPTeams-1200x480@2xnew.png'); 
     /* width: 100vw; */
     /* background-size: 300px 100px; */
     height: 80vh;

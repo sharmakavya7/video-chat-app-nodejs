@@ -1,17 +1,34 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <link rel="stylesheet" href="../assets/css/chat.css">
-            <title>Team chat</title>
+            <!-- <link rel="stylesheet" href="../assets/css/chat.css"> -->
+            <script type="module" src='assets/js/talkcreate.js'></script>
+            <title>Team meet</title>
             <!-- <script src = "assets/js/script.js"></script> -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
             <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
             <style>
                 body {
+                    /* display: flex;
+                    align-items: center;
+                    justify-content: center; */
+                    min-height: 100vh;
                     margin: 0;
                     font-family: sans-serif;
+                    background-image: url(./assets/img/chat_background.png);
+                }
+
+                h1{
+                    text-align: center;
+                }
+
+                .bg-image{
+                    background-image: url('../img/chat_background');
                 }
 
                 form {
+                    align-items: center;
                     position: fixed;
                     bottom: 0;
                     left: 0;
@@ -28,12 +45,12 @@
                     outline: 0;
                     margin-right: 0.5rem;
                     border-radius: 0.25rem;
-                    background: #ccc;
+                    background: #404040;
                 }
 
                 form button {
                     width: 6rem;
-                    background-color: #1b8c00;
+                    background-color: red;
                     color: white;
                     border: none;
                     padding: 0.5rem;
@@ -42,8 +59,54 @@
                     text-transform: uppercase;
                 }
 
+                section.chat__section {
+                    align-items: center;
+                    width: 800px;
+                    max-width: 90%;
+                    
+                    background: #fff;
+                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
+                .message__area{
+                    align-items: center;
+                    position: fixed;
+                    height: 50px;
+                    padding: 16px;
+                    display: flex;
+                    /* flex-direction: column; */
+                    /* overflow-y: auto; */
+                    padding-top: 40px;
+                }
+
+                textarea {
+                    width: 100%;
+                    border: none;
+                    padding: 20px;
+                    font-size: 16px;
+                    outline: none;
+                    background: #FBFBFB;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: flex;
+                    justify-content: center;
+                }
+
                 form button:hover {
-                    background-color: #166d01;
+                    background-color: maroon;
+                }
+
+                /* #navbar{
+                    position: fixed;
+                    top: 0;
+                } */
+
+                #navbar {
+                    overflow: hidden;
+                    background-color: #333;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
                 }
 
                 .messages {
@@ -57,26 +120,57 @@
                 }
 
                 .messages li:nth-child(odd) {
-                    background: #eee;
+                    background: azure;
+                }
+
+                .nav__link{
+                    font-family: 'Poppins', sans-serif;
+                    color: var(--white-color);
+                }
+
+                .nav__link:hover{
+                    color: var(--first-color-dark);
                 }
             </style>
         </head>
         <body>
                 
             
-                <ul class="messages"></ul>
+                <!-- <ul class="messages"></ul>
                 <form>
                     <input type="text" class="input" autocomplete="off" autofocus />
                     <button>Send</button>
-                </form>
-                <button onclick="location.href = '/teams'" ;
-                 id="myButton" class="float-left submit-button" >teams</button>
+                </form> -->
+                <nav id="navbar" class="navbar navbar-dark bg-dark text-light">
+                    <h1>Universal chat</h1>
+                    <!-- <a location.href='/teams' class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> -->
+                    <a href="/talk" class="nav__link">Go back to home page</a></li>
+                    <button onclick="location.href = '/teams'" ;    
+                 id="myButton" class="float-left submit-button btn btn-primary btn-lg active" >Video Call</button>
+                  </nav>
+                <section class="chat__section">
+                    <div class="brand">
+                        <img height="40" src="/wassup.png" alt="">
+                        
+                    </div>
+                    <div class="message__area"></div>
+                    <ul class="messages"></ul>
+                    <div>
+                        <form>
+                        <input type="text" class="input text-light" id="textarea" autocomplete="off" autofocus
+                         cols="30" rows="1" placeholder="Write a message..." required>
+                         <button class = "fa fa-paper-plane" ></i>&nbsp Send</button>  
+                        </form>
+                    </div>
+                </section>
+                <!-- <button onclick="location.href = '/teams'" ;
+                 id="myButton" class="float-left submit-button" >teams</button> -->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
                 <script>
                     const form = document.querySelector("form");
                     const input = document.querySelector(".input");
                     const messages = document.querySelector(".messages");
-                    const username = prompt("Please enter a nickname: ", "");
+                    const username = prompt("Please enter your name to join the chat: ", "");
                     const socket = io();
     
                     form.addEventListener("submit", function(event) {
@@ -115,5 +209,6 @@
                         window.scrollTo(0, document.body.scrollHeight);
                     }
                 </script>
+                
         </body>
     </html>

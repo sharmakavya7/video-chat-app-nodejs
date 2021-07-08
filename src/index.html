@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Video Chat app</title>
+        <title>Teams meet</title>
         <link rel="shortcut icon" type="image/png" href="src/favicon.png"/>
 
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -49,11 +49,12 @@
         
         
         <nav class="navbar fixed-top #212121 grey darken-4 rounded-0 d-print-none">
-            <div class="text-white"><b>Video Chat</b></div>
+            <div class="text-white"><b>Video Chat with team</b></div>
             <a href="/" > 
             <button class ="btn btn-circle rounded-25 btn-primary float-right fas fa-sign-in-alt red btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title = "Sign out"> 
                 <i class="large material-icons text-light"></i> 
             </button> </a>
+            
         </nav>
 
         
@@ -73,7 +74,7 @@
             </button></a>
 
             <button class="btn btn-md #424242 grey darken-3 btn-circle text-white pull-right" id='toggle-chat-pane'>
-                <i class="large material-icons text-light">chat</i> <span class="collection-item"><span class="badge white-text red" id='new-chat-notification' hidden>new</span>
+                <i class="large material-icons text-light" title="In meeting chat">chat</i> <span class="collection-item"><span class="badge white-text red" id='new-chat-notification' hidden>new</span>
             </button>
 
             <button class="btn btn-md #424242 grey darken-3 btn-circle" id='share-screen' title="Present now">
@@ -162,7 +163,7 @@
                     <div id='chat-messages'></div>
 
                     <div class="container">
-                        <textarea name = "content" id='chat-input' class="form-control rounded-0 chat-box border-info" rows='3' placeholder="Type message here..."></textarea>
+                        <textarea name = "content" id='chat-input' class="form-control rounded-0 chat-box border-info" rows='3' placeholder="Type message here...Press enter to send"></textarea>
                     </div>
                         
                 </div>

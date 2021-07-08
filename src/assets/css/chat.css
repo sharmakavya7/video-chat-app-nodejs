@@ -4,10 +4,10 @@
   --header-height: 3rem;
 
   /*===== Colors =====*/
-  --first-color: #FCA4A6;
-  --first-color-dark: #C1576A;
-  --first-color-darken: #A83E51;
-  --white-color: #FCF8F8;
+  --first-color: #6495ed ;      /*#CCCCFF;*/
+  --first-color-dark: #483d8b;
+  --first-color-darken: #5a4fcf;
+  --white-color: azure;
   
   /*===== Font and typography =====*/
   --body-font: 'Poppins', sans-serif;
@@ -182,21 +182,6 @@ img{
   background-color: var(--first-color-darken);
 }
 
-.form input[type="text"] {
-    border: 1.5px solid #33FFFF;
-    font-size: medium;
-    letter-spacing: 2px;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    padding: 10px 10px;
-    color: whitesmoke;
-    width: 220px;
-    border-radius: 24px;
-    transition: 0.25s;
-    outline: none;
-}
 
 /* ===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px){
@@ -261,3 +246,85 @@ img{
     width: 604px;
   }
 }
+
+/* chat UI */
+
+.bg-image{
+    background-image: url('../img/chat_background');
+}
+/* 
+  
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #F8F8F8;
+    font-family: 'Roboto', sans-serif;
+}
+section.chat__section {
+    width: 800px;
+    max-width: 90%;
+    background: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.brand {
+    padding: 20px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+.brand h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #444;
+    margin-left: 10px;
+}
+.message__area{
+    height: 500px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 40px;
+}
+textarea {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    outline: none;
+    background: #FBFBFB;
+}
+
+.message {
+    padding: 20px; 
+    border-radius: 4px; 
+    margin-bottom: 40px;
+    max-width: 300px;
+    position: relative;
+}
+.incoming {
+    background: #8F8BE8;
+    color: #fff;  
+}
+.outgoing {
+    background: #e9eafd;
+    color: #787986;
+    margin-left: auto;
+}
+.message h4 {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: #333;
+    font-size: 14px;
+}
+ */
