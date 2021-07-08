@@ -17,7 +17,7 @@
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
         <script src="assets/js/form.js"></script>
-            <title>Konnect</title>
+            <title>Team call - Sign up</title>
             <link rel="shortcut icon" type="image/png" href="src/favicon.png"/>
 </head>
 <body class="bg-image"> 
@@ -29,20 +29,20 @@
             <!-- <h1>Sign up</h1> --> 
             <div class="formContainer">
             <h1><b>Sign up</b></h1>
-                
+            <form onsubmit="signUp()" action = "/talk">
                 <input type="text"  name="username" placeholder="Username" required> <br>
                 <input type="text"  placeholder="Enter e-mail here" id="email" required><br>
                 <input type="password"  placeholder="Enter password here" id="password" required><br>
-                <input onclick="signUp()" type="submit" name="signup_submit" value="Sign up" id="signUp"/>
+                <input type="submit" name="signup_submit" value="Sign up" id="signUp"/>
                 <!-- <button onclick="signUp();" id="signUp" type="submit" name="signup_submit">SignUp</button> -->
-                <!-- <a onclick="signOut()" class="waves-effect waves-light btn-small text-white" id="signOut"> <i class="material-icons left"></i>SignOut</a>
-                <button onclick="signIn()" type="submit" id="signIn">SignIn</button> -->
-            
+                <!-- <a onclick="signOut()" class="waves-effect waves-light btn-small text-white" id="signOut"> <i class="material-icons left"></i>SignOut</a> -->
+                <!-- <button onclick="signIn()" type="submit" id="signIn">SignIn</button>  -->
+            </form>
             </div>
         </div>
     
     <div class="right">
-    <span class="loginwith">Sign in with </span>
+    <span class="loginwith">Sign up with </span>
     <!-- <button onload = "renderButton()" onclick="signInWithGoogle()" ></button> -->
     <button onclick = "signInWithGoogle()" class="social-signin btn" > Google</button>
     <!-- <button class="social-signin microsoft">Log in with Microsoft</button>
