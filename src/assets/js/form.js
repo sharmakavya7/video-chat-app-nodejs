@@ -24,6 +24,51 @@ var firebaseConfig = {
     location.href="/talk";
   }
 
+  function signUpWithEmailPassword() {
+    var email = "test@example.com";
+    var password = "hunter2";
+    // [START auth_signup_password]
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in 
+        var user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(error);
+        // ..
+      });
+    // [END auth_signup_password]
+  }
+  
+  function sendEmailVerification() {
+    // [START auth_send_email_verification]
+    firebase.auth().currentUser.sendEmailVerification()
+      .then(() => {
+        // Email verification sent!
+        // ...
+      });
+    // [END auth_send_email_verification]
+  }
+  
+  function sendPasswordReset() {
+    const email = "sam@example.com";
+    // [START auth_send_password_reset]
+    firebase.auth().sendPasswordResetEmail(email)
+      .then(() => {
+        // Password reset email sent!
+        // ..
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ..
+      });
+    // [END auth_send_password_reset]
+  }
+
   //signIN function
   function  signIn(){
     var email = document.getElementById("email");
@@ -179,20 +224,4 @@ var firebaseConfig = {
 
 
 
-  // function setPersistenceNone() {
-  //   // [START auth_set_persistence_none]
-  //   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE)
-  //     .then(() => {
-  //       var provider = new firebase.auth.GoogleAuthProvider();
-  //       // In memory persistence will be applied to the signed in Google user
-  //       // even though the persistence was set to 'none' and a page redirect
-  //       // occurred.
-  //       return firebase.auth().signInWithRedirect(provider);
-  //     })
-  //     .catch((error) => {
-  //       // Handle Errors here.
-  //       var errorCode = error.code;
-  //       var errorMessage = error.message;
-  //     });
-  //   // [END auth_set_persistence_none]
-  // }
+  

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/chat.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script type="module" src='assets/js/talkcreate.js'></script>
+    <script src='assets/js/autolink.js'></script>
     <title>Welcome to Team meet</title>
     
 </head>
@@ -31,7 +34,7 @@
                     <!-- <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Blog</a></li> -->
-                    <li class="nav__item"><a href="/" class="nav__link">Log out</a></li>
+                    <li class="nav__item"><a href="/" class="nav__link">Log out <i class="fa fa-sign-out-alt text-light"></i></a></li>
                     
                 </ul>
             </div>
@@ -56,13 +59,13 @@
                     <p class="home__description">Meet, chat, call, and collaborate  <br>in just one place.</p>
                     <!-- <a href="#" class="home__button">Get Started</a> -->
                     <button onclick="location.href = '/teams'" ;
-                    id="talkbutton" class="home__button" ><h2>New video meet</h2>
+                    id="talkbutton" class="home__button" ><b>New video meet</b>
                     <i class="fa fa-video text-light"></i> </button> 
-                    <p class="home__description"><br>OR<br>Create room for universal chat<br> by entering room's name</p>
+                    <p class="home__description"><br>OR<br>Create chat room by entering room's name</p>
                     <!-- <p class="home__description">Create room for universal chat<br> by entering room's name</p> -->
                     <form action="/chat" class="home__description">
-                        <input id="room-name" name="room" type="text" required>
-                        <button type="submit" class="home__button"><b>Create chat Room</b></button>
+                        <input id="room-name" name="room" type="text" placeholder="Room's name" required>
+                        <button type="submit" class="home__button">Create chat Room&nbsp<i class="fa fa-comment-alt text-light"></i></button>
                     </form>
                 </div>
             </div>

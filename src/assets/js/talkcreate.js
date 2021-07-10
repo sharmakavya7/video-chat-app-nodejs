@@ -1,12 +1,14 @@
-
 document.getElementById( 'talkbutton' ).addEventListener( 'click', ( e ) => {
     e.preventDefault();
-
+    // let username = h.getQString();
+    
     let roomName = document.querySelector( '#room-name' ).value;
     // let yourName = document.querySelector( '#your-name' ).value;
     // let teams = document.querySelector( 'teams' ).value;
-
-    if ( roomName ) {
+    // if ( !username ) {
+    //     document.querySelector( '#username-set' ).attributes.removeNamedItem( 'hidden' );
+    // }
+    if ( roomName) {
         //remove error message, if any
         document.querySelector( '#err-msg' ).innerHTML = "";
 

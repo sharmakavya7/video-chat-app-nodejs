@@ -14,7 +14,9 @@ app.use( favicon( path.join( __dirname, 'favicon.png' ) ) );
 app.use( '/assets', express.static( path.join( __dirname, 'assets' ) ) );
 app.use( '/img', express.static( path.join( __dirname, 'img' ) ) );
 
-const rooms = { }
+
+
+//const rooms = { }
 
 var firebaseConfig = {
     apiKey: "AIzaSyAt2TW7kvzbyyWlPn7KF_j1h-wIgiatFZ8",
@@ -32,28 +34,6 @@ firebase.initializeApp(firebaseConfig);
 app.get( '/', ( req, res ) => {
     res.sendFile( __dirname + '/form.html' );
 } );
-
-// app.get('/', (req, res) => {
-//     res.render('index', { rooms: rooms })
-//   })
-
-// app.post('/room', (req, res) => {
-//     if (rooms[req.body.room] != null) {   
-//         console.log("hello world")                         //accessing the data of input name in index.ejs 
-//       return res.redirect('/room/' + req.body.room)        //if room is overwritten, then exit
-//     }
-//     rooms[req.body.room] = { users: {} }
-//     res.redirect('/room/' + req.body.room)
-//     // Send message that new room was created
-//     io.emit('room-created', req.body.room)
-//   })
-
-//   app.get('/room/:room', (req, res) => {
-//     if (rooms[req.params.room] == null) {      //check if the room exists
-//       return res.redirect('/')           
-//     }
-//     res.render('room', { roomName: req.params.room }) 
-//   })
 
 app.get( '/chat', ( req, res ) => {
     
@@ -73,59 +53,9 @@ app.get( '/teams', ( req, res ) => {
 
 io.of( '/stream' ).on( 'connection', stream );
 
-// io.on("connection", function(socket) {
-
-//     socket.on("user_join", function(data) {
-//         this.username = data;
-//         socket.broadcast.emit("user_join", data);
-//     });
-
-//     socket.on("chat_message", function(data) {
-//         //data contains the message given by frontend.
-//         //Adding message to database
-
-//         console.log("Message received:", data);
-
-//         var messageCollection = firebase.firestore().collection("messages");
-//         messageCollection.add(data);
-
-//         //Return the message back to the frontend.
-//         socket.broadcast.emit("chat_message", data);
-//     });
-
-//     socket.on("disconnect", function(data) {
-//         socket.broadcast.emit("user_leave", this.username);
-//     });
-// });
-
 server.listen( process.env.PORT || 3000, () => {
     console.log("Server started at port 3000");
 } );
-
-// io.on('connection', socket => {
-//     socket.on('new-user', (room, name) => {
-//       socket.join(room)
-//       rooms[room].users[socket.id] = name
-//       socket.to(room).broadcast.emit('user-connected', name)
-//     })
-//     socket.on('send-chat-message', (room, message) => {
-//       socket.to(room).broadcast.emit('chat-message', { message: message, name: rooms[room].users[socket.id] })
-//     })
-//     socket.on('disconnect', () => {
-//       getUserRooms(socket).forEach(room => {
-//         socket.to(room).broadcast.emit('user-disconnected', rooms[room].users[socket.id])
-//         delete rooms[room].users[socket.id]
-//       })
-//     })
-//   })
-  
-//   function getUserRooms(socket) {
-//     return Object.entries(rooms).reduce((names, [name, room]) => {
-//       if (room.users[socket.id] != null) names.push(name)
-//       return names
-//     }, [])
-//   }
-
 
   io.on("connection", function(socket) {
 
@@ -142,7 +72,7 @@ server.listen( process.env.PORT || 3000, () => {
 
         var messageCollection = firebase.firestore().collection("messages");
         messageCollection.add(data);
-
+        
         //Return the message back to the frontend.
         socket.broadcast.emit("chat_message", data);
     });

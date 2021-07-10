@@ -4,7 +4,7 @@
             <!-- <link rel="stylesheet" href="../assets/css/chat.css"> -->
             <script type="module" src='assets/js/talkcreate.js'></script>
             <title>Team meet</title>
-            <!-- <script src = "assets/js/script.js"></script> -->
+           
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
             <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -123,14 +123,14 @@
                     background: azure;
                 }
 
-                .nav__link{
+                /* .nav__link{
                     font-family: 'Poppins', sans-serif;
                     color: var(--white-color);
                 }
 
                 .nav__link:hover{
                     color: var(--first-color-dark);
-                }
+                } */
             </style>
         </head>
         <body>
@@ -141,17 +141,19 @@
                     <input type="text" class="input" autocomplete="off" autofocus />
                     <button>Send</button>
                 </form> -->
-                <nav id="navbar" class="navbar navbar-dark bg-dark text-light">
-                    <h1>Universal chat</h1>
+                <nav id="navbar" class="navbar navbar-dark bg-dark text-light ">
+                    <h1><div> Chat </div></h1> <h4>&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    </h4>
                     <!-- <a location.href='/teams' class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a> -->
-                    <a href="/talk" class="nav__link">Go back to home page</a></li>
+                    <a href="/talk" class="float-left submit-button btn btn-primary btn-lg active nav-item">Go back to home page&nbsp<i class="fa fa-home text-light"></i></a></li>
                     <button onclick="location.href = '/teams'" ;    
-                 id="myButton" class="float-left submit-button btn btn-primary btn-lg active" >Video Call</button>
+                 id="myButton" class="float-left submit-button btn btn-primary btn-lg active nav-item">Video Call <i class="fa fa-video text-light"></i></button>
                   </nav>
                 <section class="chat__section">
                     <div class="brand">
-                        <img height="40" src="/wassup.png" alt="">
-                        
+                        <img height="70" src="./assets/img/monitoring.png" alt="">                        
                     </div>
                     <div class="message__area"></div>
                     <ul class="messages"></ul>
@@ -208,6 +210,7 @@
                         messages.appendChild(li);
                         window.scrollTo(0, document.body.scrollHeight);
                     }
+
                 </script>
                 
         </body>

@@ -252,6 +252,41 @@ img{
 .bg-image{
     background-image: url('../img/chat_background');
 }
+
+section.chat__section {
+    /* top:100px; */
+    align-items:flex-end;
+    width: 800px;
+    max-width: 90%;
+    background: #fff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.message__area{
+    height: 500px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 40px;
+}
+
+.message {
+    padding: 20px; 
+    border-radius: 4px; 
+    margin-bottom: 40px;
+    max-width: 300px;
+    position: relative;
+}
+
+.brand {
+    top:50px;
+    padding: 100px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+
 /* 
   
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
@@ -326,5 +361,5 @@ textarea {
     left: 0;
     color: #333;
     font-size: 14px;
-}
- */
+} */
+
