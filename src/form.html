@@ -30,7 +30,9 @@
             <div class="formContainer">
             <h1><b>Sign up</b></h1>
             <form onsubmit="signUp()" action = "/talk">
-                <input type="text"  name="username" placeholder="Username" required> <br>
+                <div>
+                    <input type="text" class="fa fa-user" name="username" placeholder="Username" required> <br>
+                </div>
                 <input type="text"  placeholder="Enter e-mail here" id="email" required><br>
                 <input type="password"  placeholder="Enter password here" id="password" required><br>
                 <input type="submit" name="signup_submit" value="Sign up" id="signUp"/>

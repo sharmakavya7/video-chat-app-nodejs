@@ -75,7 +75,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--first-color);
+  background-color: rgba(0, 255, 170, 0) ;
 }
 
 /*===== NAV =====*/
