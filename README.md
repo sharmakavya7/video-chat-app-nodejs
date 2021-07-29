@@ -8,7 +8,7 @@ A conference call implementation using WebRTC, Socket.io and Node.js.
 - `node app.js`
 
 # Demo
-For demo, click [here] (https://frozen-caverns-24163.herokuapp.com/)
+For demo, click https://frozen-caverns-24163.herokuapp.com/
 
 # Features
 - Multi-participants Video chat
