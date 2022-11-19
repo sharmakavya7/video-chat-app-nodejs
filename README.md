@@ -8,7 +8,10 @@ A conference call implementation using WebRTC, Socket.io and Node.js.
 - `node app.js`
 
 # Demo
-For demo, click https://frozen-caverns-24163.herokuapp.com/
+Trello board URL for Agile Methodology: https://trello.com/b/iW69K8zW/video-chat-app
+Demo: https://frozen-caverns-24163.herokuapp.com/
+App demo: https://frozen-caverns-24163.herokuapp.com/
+Video demo: https://youtu.be/AzX4lQD-lKQ
 
 # Features
 - Multi-participants Video chat
